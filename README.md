@@ -25,8 +25,9 @@ Quiz Session + Questions
 - Implemented AI-powered quiz generation service using Azure OpenAI
 - Implemented quiz submission and scoring logic
 - Built REST API endpoints using a service-layer architecture
+- Added validation in the service flow for reliable quiz generation and submission handling
 - Implemented global error handling middleware for consistent API responses
-- Implemented unit tests for backend services (OpenAI integration and quiz generation logic) using xUnit and Moq
+- Implemented unit tests for backend services (OpenAIService integration and quiz generation logic) using xUnit and Moq
 - Followed clean dependency flow: Controller → Service → Repository / AI integrations
 
 ## Tech Stack
