@@ -51,7 +51,7 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(
                 "http://localhost:8080",
-                "https://blue-smoke-07fa87403.1.azurestaticapps.net"
+                "https://main.d2tidw0fafhzdw.amplifyapp.com/"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
