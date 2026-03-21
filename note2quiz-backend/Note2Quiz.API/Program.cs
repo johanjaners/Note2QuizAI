@@ -43,6 +43,7 @@ builder.Services.AddSingleton<IChatClient>(sp =>
 
     return new AzureChatClient(endpoint, apiKey, deployment);
 });
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(
@@ -77,7 +78,10 @@ builder
             new System.Text.Json.Serialization.JsonStringEnumConverter()
         );
     });
+
 builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder
     .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -103,6 +107,9 @@ var app = builder.Build();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.MapOpenApi();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseCors("AllowFrontend");
 app.UseAuthentication();
