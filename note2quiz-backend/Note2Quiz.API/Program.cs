@@ -43,6 +43,7 @@ builder.Services.AddSingleton<IChatClient>(sp =>
 
     return new AzureChatClient(endpoint, apiKey, deployment);
 });
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(
@@ -51,7 +52,7 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(
                 "http://localhost:8080",
-                "https://main.d2tidw0fafhzdw.amplifyapp.com/"
+                "https://main.d2tidw0fafhzdw.amplifyapp.com"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
