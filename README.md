@@ -1,5 +1,5 @@
 # Note2QuizAI
-> Full-stack AI application with independent AWS deployment (Amplify, Elastic Beanstalk, CloudFront)
+> Full-stack AI application with AWS deployment (Amplify, Elastic Beanstalk, CloudFront)
 
 AI-powered quiz generator that converts uploaded notes into quiz questions using Azure AI Vision (OCR) and Azure OpenAI.
 
