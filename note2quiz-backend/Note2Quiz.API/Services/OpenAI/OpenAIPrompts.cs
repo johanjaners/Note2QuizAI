@@ -7,7 +7,7 @@ public static class OpenAIPrompts
   public static string BuildUserPrompt(string text, Difficulty difficulty)
   {
     return
-        $"Gen 5 MCQs, 4 opt each. " +
+        $"Gen 5-10 MCQs, 4 opt each. " +
         $"Return JSON: {{title:'', questions:[{{question:'', options:['','','',''], correctOptionIndex:0}}]}}. " +
         $"Diff: {difficulty}. Text: {text}";
   }
