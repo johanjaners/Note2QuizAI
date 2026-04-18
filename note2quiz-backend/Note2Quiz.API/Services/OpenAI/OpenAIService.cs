@@ -41,6 +41,8 @@ public class OpenAIService : IOpenAIService
 
         OpenAIValidator.Validate(model);
 
+        QuizOptionShuffler.Shuffle(model);
+
         return model;
     }
 }
