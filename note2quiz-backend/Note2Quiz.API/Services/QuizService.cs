@@ -4,19 +4,8 @@ using Note2Quiz.API.Models;
 
 namespace Note2Quiz.API.Services;
 
-public class QuizService : IQuizService
+public class QuizService(IQuizRepository _repo, IOpenAIService _openAi, IVisionService _vision) : IQuizService
 {
-    private readonly IQuizRepository _repo;
-    private readonly IOpenAIService _openAi;
-    private readonly IVisionService _vision;
-
-    public QuizService(IQuizRepository repo, IOpenAIService openAi, IVisionService vision)
-    {
-        _repo = repo;
-        _openAi = openAi;
-        _vision = vision;
-    }
-
     public async Task<QuizResponse> CreateQuizAsync(
         string userId,
         CreateQuizRequest request,
