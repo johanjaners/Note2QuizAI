@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This is the archived legacy fork. Active development continues in [johanjaners/note2quiz-ai](https://github.com/johanjaners/note2quiz-ai). The current application is [live on Azure](https://white-flower-05e98d103.5.azurestaticapps.net).
+
 # Note2QuizAI
 > Full-stack AI application with AWS deployment (Amplify, Elastic Beanstalk, CloudFront)
 
